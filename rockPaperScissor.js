@@ -1,3 +1,9 @@
+
+const playerSelection = "rock";
+const computerSelection= getComputerChoice();
+console.log(computerSelection)
+alert(gameGround(playerSelection,computerSelection))
+
 function getComputerChoice()
 {
     let num =Math.floor(Math.random() * 4);
@@ -16,8 +22,20 @@ function getComputerChoice()
  return choice;
 }
 
-const playerSelection = "rock";
-const computerSelection= getComputerChoice();
-console.log(computerSelection)
+function  gameGround(playerSelection,computerSelection){
+    msg=''
+    if((playerSelection=='rock'&&computerSelection=='scissor')||(playerSelection=='scissor'&&computerSelection=='paper')||
+    (playerSelection=='paper'&&computerSelection=='rock')){
+        msg='player won!'}
+        else if(playerSelection==computerSelection){
+            msg="It's a tie!"
+        }
+        else 
+        msg = 'Computer won!'; 
+    
+return msg;
+}
+
+
 
 
