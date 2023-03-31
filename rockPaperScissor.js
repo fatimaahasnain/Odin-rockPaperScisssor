@@ -1,5 +1,5 @@
-
-const playerSelection = "rock";
+userChoice= prompt('Enter your weapon: ');
+const playerSelection=userChoice.toLowerCase()
 const computerSelection= getComputerChoice();
 console.log(computerSelection)
 alert(gameGround(playerSelection,computerSelection))
